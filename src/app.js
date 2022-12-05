@@ -7,7 +7,7 @@ submitButton.addEventListener("click", (e) => {
   e.preventDefault();
   const urlInput = inputForm.url.value;
 
-  fetchData("http://localhost:8000/api/post_images", { url: urlInput },
+  fetchData("api/post_images", { url: urlInput },
     (res) => {
       sendToChannelWait(res.result, 0)
     }, (err) => {
