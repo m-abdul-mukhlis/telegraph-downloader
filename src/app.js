@@ -20,11 +20,11 @@ function sendToChannelWait(data, index) {
   if (data.length != index) {
     sendToChannel(data[index].src, () => {
       console.log("Success", index);
-      const item = `<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span><strong>Sucess!</strong>` + index + ` image send to telegram channel.<br>`
+      const item = `<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span><strong>Sucess!</strong> ` + index + ` image send to telegram channel.<br>`
       feedDisplay.insertAdjacentHTML("beforeend", item)
       setTimeout(() => {
         sendToChannelWait(data, index + 1)
-      }, 500);
+      }, 1000);
     })
   } else {
     console.log("All Data Send");
