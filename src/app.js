@@ -24,7 +24,7 @@ function sendToChannelWait(data, index) {
       feedDisplay.insertAdjacentHTML("beforeend", item)
       setTimeout(() => {
         sendToChannelWait(data, index + 1)
-      }, 1000);
+      }, 5000);
     })
   } else {
     console.log("All Data Send");
