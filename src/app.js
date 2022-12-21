@@ -28,6 +28,8 @@ function sendToChannelWait(data, index) {
     })
   } else {
     console.log("All Data Send");
+    const item = `<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span><strong>All Data Send!</strong> image send to telegram channel.<br>`
+    feedDisplay.insertAdjacentHTML("beforeend", item)
   }
 }
 
