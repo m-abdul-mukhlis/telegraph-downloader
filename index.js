@@ -17,6 +17,10 @@ app.get('/', (req, res) => {
   res.sendFile("index.html", { root: '.' })
 })
 
+app.get('/api/push-token', (req, res) => {
+  console.log(req.body);
+})
+
 app.post('/api/post_images', (req, res) => {
   const url = req?.body?.url
   axios(url).then((response) => {
